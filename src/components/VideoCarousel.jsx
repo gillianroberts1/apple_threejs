@@ -68,8 +68,8 @@ const VideoCarousel = () => {
                 window.innerWidth < 760
                   ? "10vw" // mobile
                   : window.innerWidth < 1200
-                  ? "10vw" // tablet
-                  : "4vw", // laptop
+                    ? "10vw" // tablet
+                    : "4vw", // laptop
             });
 
             // set the background color of the progress bar
@@ -101,7 +101,7 @@ const VideoCarousel = () => {
       const animUpdate = () => {
         anim.progress(
           videoRef.current[videoId].currentTime /
-            hightlightsSlides[videoId].videoDuration
+            hightlightsSlides[videoId].videoDuration,
         );
       };
 
@@ -221,8 +221,8 @@ const VideoCarousel = () => {
               isLastVideo
                 ? () => handleProcess("video-reset")
                 : !isPlaying
-                ? () => handleProcess("play")
-                : () => handleProcess("pause")
+                  ? () => handleProcess("play")
+                  : () => handleProcess("pause")
             }
           />
         </button>

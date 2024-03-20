@@ -1,11 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
 
 //...
 import * as Sentry from "@sentry/react";
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 Sentry.init({
   dsn: "https://47495739c9caa7cea0c80250e1411ed2@o4506938706165760.ingest.us.sentry.io/4506938710228992",
@@ -29,10 +29,8 @@ Sentry.init({
   replaysOnErrorSampleRate: 1.0, // If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
 });
 
-
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-)
+);
